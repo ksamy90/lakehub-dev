@@ -45,19 +45,19 @@
       />
 
       <nav class="academy-nav">
-        <a href="" class="academy-nav-item academy-nav-active"
+        <a href="" class="scrollLink academy-nav-item academy-nav-active"
           ><span>&#60;&#62; </span>ACADEMY</a
         >
-        <a href="" class="academy-nav-item ml-4"
+        <a href="" class="scrollLink academy-nav-item ml-4"
           ><span>&#60;&#62; </span>PROCESS</a
         >
-        <a href="#about" class="academy-nav-item ml-4"
+        <a href="#about" class="scrollLink academy-nav-item ml-4"
           ><span>&#60;&#62; </span>ABOUT</a
         >
-        <a href="#team" class="academy-nav-item ml-4"
+        <a href="#team" class="scrollLink academy-nav-item ml-4"
           ><span>&#60;&#62; </span>TEAM</a
         >
-        <a href="#contact" class="academy-nav-item ml-4"
+        <a href="#contact" class="scrollLink academy-nav-item ml-4"
           ><span>&#60;&#62; </span>CONTACT US</a
         >
         <a href="" class="academy-nav-item ml-4">
@@ -695,6 +695,17 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("a.scrollLink").click(function(event) {
+          event.preventDefault();
+          $("html, body").animate(
+            { scrollTop: $($(this).attr("href")).offset().top },
+            1000
+          );
+        });
+      });
+    </script>
     <script src="/assets/js/wow.min.js"></script>
     <script src="/assets/js/incubation_script.js"></script>
     <script>
