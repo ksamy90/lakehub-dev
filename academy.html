@@ -48,7 +48,7 @@
         <a href="" class="scrollLink academy-nav-item academy-nav-active"
           ><span>&#60;&#62; </span>ACADEMY</a
         >
-        <a href="" class="scrollLink academy-nav-item ml-4"
+        <a href="#process" class="scrollLink academy-nav-item ml-4"
           ><span>&#60;&#62; </span>PROCESS</a
         >
         <a href="#about" class="scrollLink academy-nav-item ml-4"
@@ -286,7 +286,7 @@
       </div>
     </div>
 
-    <div class="roadmap mt-3 wow fadeIn" data-wow-duration="1.5s">
+    <div class="roadmap mt-3 wow fadeIn" data-wow-duration="1.5s" id="process">
       <div class="color-orange title text-left">
         Our Software Engineering Roadmap
       </div>
@@ -701,7 +701,7 @@
           event.preventDefault();
           $("html, body").animate(
             { scrollTop: $($(this).attr("href")).offset().top },
-            1000
+            1500
           );
         });
       });
